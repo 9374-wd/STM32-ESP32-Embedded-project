@@ -1,0 +1,101 @@
+<view class="container">
+  <view class="top-bar">
+    <view class="temp-item" wx:for="{{list}}" wx:key="index" wx:if="{{item.name === '温度'}}">
+      <text class="label">温度：</text>
+      <text class="value">{{item.value}}</text>
+    </view>
+
+    <view class="divider">
+      <view class="divider-icon"></view>
+    </view>
+
+    <view class="humi-item" wx:for="{{list}}" wx:key="index" wx:if="{{item.name === '湿度'}}">
+      <text class="label">湿度：</text>
+      <text class="value">{{item.value}}</text>
+    </view>
+  </view>
+
+  <view class="food-section" wx:for="{{list}}" wx:key="index" wx:if="{{item.name === '食物重量'}}">
+    <view class="food-bowl"></view>
+    <view class="food-weight">
+      <text class="weight-text">食盆余粮：{{item.value}}</text>
+    </view>
+  </view>
+
+  <view class="btn-grid">
+    <view class="btn-card" bindtap="sendFeedCommand">
+      <view class="btn-header">
+        <text class="btn-title">喂食🍖</text>
+      </view>
+      <view class="btn-content">
+        <view class="btn-icon feed-icon"></view>
+        <text class="btn-desc">立即喂食</text>
+      </view>
+    </view>
+
+    <view class="btn-card" bindtap="sendWaterCommand">
+      <view class="btn-header">
+        <text class="btn-title">加水💧</text>
+      </view>
+      <view class="btn-content">
+        <view class="btn-icon water-icon"></view>
+        <text class="btn-desc">立即加水</text>
+      </view>
+    </view>
+
+    <view class="btn-card" bindtap="showFeedTimePicker">
+      <view class="btn-header">
+        <text class="btn-title">定时投喂⏰</text>
+        <view class="switch-btn {{timerFeedStatus ? 'switch-active' : ''}}" catchtap="toggleTimerFeed">
+          <view class="switch-slider"></view>
+        </view>
+      </view>
+      <view class="btn-content">
+        <view class="btn-icon timer-feed-icon"></view>
+        <text class="btn-desc">{{feedTime || '点击设置时间'}}</text>
+      </view>
+    </view>
+
+    <view class="btn-card" bindtap="showWaterTimePicker">
+      <view class="btn-header">
+        <text class="btn-title">定时加水⏰</text>
+        <view class="switch-btn {{timerWaterStatus ? 'switch-active' : ''}}" catchtap="toggleTimerWater">
+          <view class="switch-slider"></view>
+        </view>
+      </view>
+      <view class="btn-content">
+        <view class="btn-icon timer-water-icon"></view>
+        <text class="btn-desc">{{waterTime || '点击设置时间'}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="modal {{showTimeModal ? 'show' : ''}}" bindtap="closeTimePicker">
+    <view class="modal-box" catchtap="true">
+      <view class="modal-title">设置{{currentModalType === 'feed' ? '投喂' : '加水'}}时间</view>
+      
+      <picker mode="time" value="{{selectedTime}}" bindchange="onTimeChange" class="time-picker">
+        <view class="time-show">{{selectedTime}}</view>
+      </picker>
+
+      <view class="week-row">
+        <text class="week-title">重复星期：</text>
+        <view class="week-list">
+          <view 
+            class="week-item {{item.checked ? 'week-checked' : ''}}"
+            wx:for="{{weekList}}" wx:key="index"
+            bindtap="toggleWeek" data-index="{{index}}"
+          >
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+
+      <view class="modal-btns">
+        <button bindtap="closeTimePicker" class="btn-cancel">取消</button>
+        <button bindtap="confirmTime" class="btn-confirm">确定</button>
+      </view>
+    </view>
+  </view>
+  <logs id="logComponent" />
+</view>

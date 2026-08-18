@@ -1,0 +1,117 @@
+/* index.wxss */
+page {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* 全屏背景 */
+.bg-wrap {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* 图片铺满屏幕 */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 标语放在天空位置 */
+.sub-title {
+  position: absolute;
+  top: 120rpx;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  opacity: 0.85;
+  z-index: 5;
+}
+
+/* 按钮容器 - 底部居中 */
+.btn-container {
+  position: absolute;
+  bottom: 160rpx;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* 蓝色按钮 + 顶部高光 */
+.enter-btn {
+  width: 380rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: linear-gradient(#42a5ff, #2196f3);
+  color: white;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  border: none;
+  position: relative;
+  box-shadow: 0 8rpx 20rpx rgba(33, 150, 243, 0.4);
+  overflow: hidden;
+}
+
+/* 按钮顶部高光 */
+.enter-btn::before {
+  content: "";
+  position: absolute;
+  top: 2rpx;
+  left: 5%;
+  width: 90%;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* 装饰光点 */
+.light {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 5;
+  animation: float 6s infinite ease-in-out;
+}
+
+.light1 {
+  width: 20rpx;
+  height: 20rpx;
+  top: 20vh;
+  left: 15vw;
+  animation-delay: 0s;
+}
+
+.light2 {
+  width: 28rpx;
+  height: 28rpx;
+  top: 45vh;
+  right: 12vw;
+  animation-delay: 2s;
+}
+
+.light3 {
+  width: 16rpx;
+  height: 16rpx;
+  bottom: 35vh;
+  left: 25vw;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0rpx); }
+  50% { transform: translateY(-20rpx); }
+  100% { transform: translateY(0rpx); }
+}

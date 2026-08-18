@@ -1,0 +1,167 @@
+.page {
+  background: linear-gradient(180deg, #E8F3FF 0%, #FFFFFF 100%);
+  min-height: 100vh;
+  padding-bottom: 120rpx;
+  padding-top: 120rpx;
+}
+
+.user-card {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 30rpx;
+  border-radius: 24rpx;
+  padding: 40rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4rpx 20rpx rgba(64, 150, 255, 0.08);
+  border: 1rpx solid rgba(64, 150, 255, 0.1);
+}
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #63A8FF 0%, #4096FF 100%);
+  margin-right: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-text {
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: bold;
+}
+
+.info .name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #2C85E7;
+}
+
+.info .desc {
+  font-size: 26rpx;
+  color: #666;
+  display: block;
+  margin-top: 10rpx;
+}
+
+.menu-list {
+  margin: 30rpx;
+  border-radius: 24rpx;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  box-shadow: 0 4rpx 20rpx rgba(64, 150, 255, 0.06);
+  border: 1rpx solid rgba(64, 150, 255, 0.08);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid rgba(64, 150, 255, 0.08);
+  position: relative;
+}
+
+.menu-item:active {
+  background: rgba(64, 150, 255, 0.05);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  margin-right: 24rpx;
+  font-size: 32rpx;
+}
+
+.title {
+  flex: 1;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.arrow {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.logout {
+  background: rgba(255, 77, 79, 0.03);
+}
+
+.logout .title {
+  color: #ff4d4f;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 日志美化弹窗 */
+.log-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.log-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.log-modal__content {
+  width: 80%;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  max-height: 60vh;
+}
+
+.log-modal__header {
+  padding: 30rpx;
+  background: #f2f9ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  color: #2C85E7;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.clear-btn {
+  font-size: 26rpx;
+  color: #ff4d4f;
+}
+
+.log-modal__body {
+  padding: 20rpx;
+  max-height: 40vh;
+}
+
+.log-item {
+  padding: 16rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  font-size: 26rpx;
+}
+
+.log-empty {
+  text-align: center;
+  padding: 40rpx;
+  color: #999;
+}

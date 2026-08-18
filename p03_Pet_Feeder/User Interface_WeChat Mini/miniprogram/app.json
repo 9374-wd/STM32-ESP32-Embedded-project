@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/main/main",
+    "pages/notice/notice"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "tabBar": {
+    "color": "#86909C",
+    "selectedColor": "#00C48C",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/main_black.png",
+        "iconPath": "images/main_white.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/mages_black.png",
+        "iconPath": "images/mages_white.png",
+        "pagePath": "pages/main/main",
+        "text": "控制"
+      },
+      {
+        "selectedIconPath": "images/notice_black.png",
+        "iconPath": "images/notice_white.png",
+        "pagePath": "pages/notice/notice",
+        "text": "默认配置"
+      },
+      {
+        "selectedIconPath": "images/journal_black.png",
+        "iconPath": "images/journal_white.png",
+        "pagePath": "pages/logs/logs",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

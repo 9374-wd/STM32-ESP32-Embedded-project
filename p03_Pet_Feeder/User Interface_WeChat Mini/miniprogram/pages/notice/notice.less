@@ -1,0 +1,147 @@
+page {
+  background: linear-gradient(180deg, #E8F3FF 0%, #FFFFFF 100%);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 200rpx 30rpx 120rpx;
+}
+
+/* 顶部标题 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+  gap: 16rpx;
+}
+
+.title-icon {
+  width: 64rpx;
+  height: 64rpx;
+  background: #4096FF;
+  border-radius: 50%;
+}
+
+.page-title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ============== 核心：卡片布局（标题+数值同线） ============== */
+.setting-card {
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  padding: 40rpx;
+  margin-bottom: 32rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.06);
+}
+
+/* 标题+数值同一行 */
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32rpx;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.card-icon {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: #4096FF;
+}
+
+.feed-icon {
+  mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="6" rx="1" fill="%23000"/><rect x="3" y="11" width="9" height="6" rx="1" fill="%23000"/><path d="M15 11h4v6h-4z" fill="%23000"/></svg>') no-repeat center / 50%;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="6" rx="1" fill="%23000"/><rect x="3" y="11" width="9" height="6" rx="1" fill="%23000"/><path d="M15 11h4v6h-4z" fill="%23000"/></svg>') no-repeat center / 50%;
+}
+
+.water-icon {
+  mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v9a9 9 0 1 0 9-9h-9z" fill="%23000"/></svg>') no-repeat center / 50%;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v9a9 9 0 1 0 9-9h-9z" fill="%23000"/></svg>') no-repeat center / 50%;
+}
+
+.card-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 数值组（数值+单位同线） */
+.value-group {
+  display: flex;
+  align-items: baseline;
+  gap: 8rpx;
+}
+
+.card-value {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #4096FF;
+}
+
+.unit {
+  font-size: 32rpx;
+  color: #999;
+}
+
+/* 输入框 */
+.input-group {
+  margin-bottom: 16rpx;
+}
+
+.custom-input {
+  width: 100%;
+  height: 88rpx;
+  background: #F5F7FA;
+  border-radius: 16rpx;
+  padding: 0 24rpx;
+  font-size: 32rpx;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* 提示文字 */
+.tip {
+  font-size: 28rpx;
+  color: #999;
+  line-height: 1.4;
+}
+
+/* 保存按钮 */
+.btn-wrap {
+  margin-top: 40rpx;
+}
+
+.save-btn {
+  width: 100%;
+  height: 96rpx;
+  background: #4096FF;
+  border-radius: 48rpx;
+  border: none;
+  box-shadow: 0 8rpx 24rpx rgba(64, 150, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+}

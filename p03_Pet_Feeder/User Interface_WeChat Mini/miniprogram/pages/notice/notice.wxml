@@ -1,0 +1,64 @@
+<view class="container">
+  <!-- 顶部标题区 -->
+
+  
+  <view class="header">
+    <view class="title-icon"></view>
+    <text class="page-title">投喂设置</text>
+  </view>
+
+  <!-- 出粮设置卡片（标题+数值同线） -->
+  <view class="setting-card">
+    <view class="card-row">
+      <view class="card-header">
+        <view class="card-icon feed-icon"></view>
+        <text class="card-title">🍖默认出粮量</text>
+      </view>
+      <view class="value-group">
+        <text class="card-value">{{feedAmount}}</text>
+        <text class="unit">g</text>
+      </view>
+    </view>
+    <view class="input-group">
+      <input 
+        class="custom-input" 
+        type="digit" 
+        placeholder="请输入出粮量" 
+        value="{{feedAmount}}" 
+        bindinput="onFeedInput"
+      />
+    </view>
+    <view class="tip">建议单次喂食 20-50g，根据宠物食量调整</view>
+  </view>
+
+  <!-- 加水设置卡片（标题+数值同线） -->
+  <view class="setting-card">
+    <view class="card-row">
+      <view class="card-header">
+        <view class="card-icon water-icon"></view>
+        <text class="card-title">💧默认加水量</text>
+      </view>
+      <view class="value-group">
+        <text class="card-value">{{waterAmount}}</text>
+        <text class="unit">ml</text>
+      </view>
+    </view>
+    <view class="input-group">
+      <input 
+        class="custom-input" 
+        type="digit" 
+        placeholder="请输入加水量" 
+        value="{{waterAmount}}" 
+        bindinput="onWaterInput"
+      />
+    </view>
+    <view class="tip">建议单次加水 20-100ml，保持水源新鲜</view>
+  </view>
+
+  <!-- 保存按钮 -->
+  <view class="btn-wrap">
+    <button class="save-btn" bindtap="saveSettings">
+      <text class="btn-text">保存设置</text>
+    </button>
+  </view>
+</view>

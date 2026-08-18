@@ -1,0 +1,55 @@
+<view class="page">
+  <view class="user-card">
+    <view class="avatar">
+      <text class="avatar-text">宠</text>
+    </view>
+    <view class="info">
+      <text class="name">宠物管理员</text>
+      <text class="desc">智能喂食器账号</text>
+    </view>
+  </view>
+
+  <view class="menu-list">
+    <view class="menu-item" bindtap="bindDevice">
+      <text class="icon">📶</text>
+      <text class="title">设备绑定</text>
+      <view class="arrow">></view>
+    </view>
+
+    <view class="menu-item" bindtap="goLogs">
+      <text class="icon">📜</text>
+      <text class="title">运行日志</text>
+      <view class="arrow">></view>
+    </view>
+
+    <view class="menu-item" bindtap="goSetting">
+      <text class="icon">⚙️</text>
+      <text class="title">系统设置</text>
+      <view class="arrow">></view>
+    </view>
+
+    <view class="menu-item logout" bindtap="logout">
+      <text class="title">退出登录</text>
+    </view>
+  </view>
+</view>
+
+<!-- 漂亮的内置日志弹窗（带清除按钮） -->
+<view class="log-modal {{showLogModal ? 'show' : ''}}" bindtap="closeLogModal">
+  <view class="log-modal__content" catchtap="true">
+    <view class="log-modal__header">
+      <text>🐾 运行日志</text>
+      <view class="header-right">
+        <text class="clear-btn" bindtap="clearLogs">清空</text>
+        <text bindtap="closeLogModal">×</text>
+      </view>
+    </view>
+
+    <scroll-view scroll-y class="log-modal__body">
+      <view wx:if="{{logs.length === 0}}" class="log-empty">暂无记录</view>
+      <view wx:for="{{logs}}" wx:key="*this" class="log-item">
+        {{item}}
+      </view>
+    </scroll-view>
+  </view>
+</view>

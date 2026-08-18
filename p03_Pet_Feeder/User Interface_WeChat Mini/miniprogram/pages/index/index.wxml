@@ -1,0 +1,20 @@
+<!--index.wxml 猫狗之光 静态主题页-->
+<view class="bg-wrap">
+  <!-- 全屏背景图 -->
+  <image class="bg-img" src="/images/pet_light.png"></image>
+
+  <!-- 标语放在天空位置 -->
+  <view class="sub-title">用心守护每一只小可爱</view>
+
+  <!-- 装饰光点 -->
+  <view class="light light1"></view>
+  <view class="light light2"></view>
+  <view class="light light3"></view>
+
+  <!-- 底部按钮 -->
+  <view class="btn-container">
+    <button class="enter-btn" bindtap="goControlPage">
+      进入智能喂食系统
+    </button>
+  </view>
+</view>
